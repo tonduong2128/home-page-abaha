@@ -1,0 +1,587 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+.btn{
+    outline: none;
+    border: none;
+    padding: 10px 24px;
+    height:min-content;
+    border-radius: 50px;
+    color: red;
+    background-color:#fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    font-weight: 700;
+}
+.btn:hover{
+    transform:scale(1.1);
+}
+.active{
+    opacity: 0.6;
+}
+.hover-link:hover{
+    transition: color 0.4s ease-in-out;
+    color:red;
+}
+
+
+
+
+
+
+
+
+
+
+/*Navbar*/
+.page-home-container{
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+}
+.navbar-background{
+    background: rgba(0, 0, 0, 0) url(https://abaha.vn/images/background-header.png) no-repeat scroll center center / cover;
+    height: 100vh;
+    width: 100%;
+    position:absolute;
+    background-color: #666;
+    z-index: -1;
+    cursor: pointer;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.navbar-menu{
+    margin-right: 20px;
+}
+.navbar-menu__icon{
+    display:inline-block;
+    color:#fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+.btn-navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.navbar-logo{
+    width: 180px;
+}
+.navbar-nav{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.navbar-options{
+    display: flex;
+    align-items: center;
+}
+.nav-item .nav-link{
+    font-size:14px;
+    font-weight:600;
+    padding:30px 16px ;
+    color: #fff
+}
+.nav-item .nav-link:hover{
+    opacity: 0.6;
+    transition: all 0.2s linear;
+}
+
+.navbar-scroll{
+    padding-left:80px;
+    padding-right:80px;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-scroll a{
+    color: #818180 !important;
+    
+}
+.navbar-scroll .navbar-menu i{
+    color: #999;
+}
+.navbar-scroll ~.separation-navbar{
+    height:80px;
+}
+/*end Navbar*/
+
+/*banner*/
+.banner{
+   color: #fff;
+}
+.banner-title{
+    font-size:28px;
+    font-weight:900
+}
+.banner-content{
+    padding-top: 30px;
+}
+.banner-content__item{
+    font-size:18px;
+    line-height: 30px;
+    font-weight: 300;
+}
+.btn-banner{
+    padding: 48px 0;
+}
+.btn-create{
+    margin-right:24px ;
+}
+.btn-create,
+.btn-advise{
+    background-color: #f0512c;
+    color:#fff;
+}
+/*end banner*/
+
+
+/*introduction product*/
+.screenshots{
+    padding-top: 100px;
+}
+.introduction-product{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.introduction-product__title{
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+}
+.introduction-product__title::before{
+    content:"";
+    position: absolute;
+    width:70px;
+    height: 2px;
+    background-color: #f63d2d;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.introduction-product__content{
+    margin-top:24px;
+}
+.introduction-product__details{
+    padding-top: 4px;
+}
+.introduction-product__details a{
+    color: #d4642e;
+}
+.container-product__item-imgs{
+    border-radius: 60px;
+    position: relative;
+    border: 2px solid #ccc;
+    overflow: hidden;
+}
+.container-product__item-imgs:hover .container-product__item-layout{
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform-origin: center ;
+    transition: all 0.4s linear;
+}
+.container-product__item-imgs:hover .container-product__item-img{
+    transform:scale(1.2);
+}
+.container-product__item-imgs:hover a{
+    transform: scale(1.2)
+}
+.container-product__item-img{
+    border-radius: 60px;
+    max-width: 100%;
+    width: 100%;
+    object-fit:cover;
+    transition:all 0.2s linear;
+}  
+.container-product__item-layout{
+    content:"";
+    position: absolute;
+    background-color: #f63d2d;
+    border-radius: 60px;
+    opacity: 0.9;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    overflow: hidden;
+}
+.container-product__item-layout a{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    transition:all 0.2s linear;
+}
+.container-product__item-content{
+    padding-top:10px;
+}
+.container-product__item-title a{
+    display: block;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.container-product__item-description{
+    margin-top:24px;
+    margin-bottom:10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+    overflow: hidden;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}  
+
+.product__view-more{
+    padding-top:50px;
+    text-align: center;
+}
+.btn-product__view-more{
+    background-color: #F0512C ;
+    color: #fff;
+    padding:16px 18px;
+}
+/*end introduction product*/
+
+ /*service-thumb*/
+ .service-thumb__item{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.service-thumb__item-img{
+    max-width: 100%;
+    width:75%;
+    transform:rotate(-22deg)
+}
+.service-thumb__item-content-text-svg{
+    padding:14px 16px;
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:0 0 3px #ccc;
+    border-radius: 4px;
+    
+}
+.service-thumb__item-content-text-svg svg{
+    width:21px;
+    height:21px;
+    color: #f63d2d;
+}
+.service-thumb__item-title{
+    font-size:36px;
+    font-weight: 700;
+    text-align: center;
+}
+.service-thumb__item-content-text{
+    display: flex;
+    align-items: center;
+    font-size:16px;
+    padding:16px 0px;   
+    color:#42464e;
+    font-weight: 600;
+    line-height: 24px;
+}
+.service-thumb__item-content-text i{
+    align-self: flex-start;
+    padding-top: 4px;
+    padding-right:12px ;
+}
+.service-thumb__item-content-text-custom{
+    line-height: 20px;
+    padding:12px 0px;
+
+}
+.service-thumb__item-content-text i{
+    color: #f63d2d;
+}
+.service-thumb__item-img-custom{
+    width:100%;
+}
+.service-thumb__item-content-text-icon i{
+    font-size: 10px;
+}
+.service-thumb__item-content-text-icon{
+    align-self: flex-start;
+}
+.service-thumb__item-btn{
+    background-color:#F0512C ;
+    color: #fff;
+    margin-left: 20px;
+}
+.service-thumb__item-btn-contianer{
+    padding-top: 80px;
+    width:max-content;
+}
+/*end service-thumb*/
+
+ /*feature */
+ .feature-container{
+    padding-bottom: 50px;
+}
+.feature-container__title{
+    text-align:center;
+    padding-bottom: 50px;
+    margin:0 0 24px;
+    font-size:  36px;
+    font-weight: 700;
+}
+.feature-container__item{
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 48px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: space-between;
+    margin-bottom: 28px;
+    transition: all 0.2s ease-in-out ;
+}
+.feature-container__item:hover{
+    transform:translateY(-8px);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+}
+.feature-container__item-name{
+    font-size: 24px;
+    color: red;
+    font-weight:600;
+    padding-bottom: 30px;
+}
+.feature-container__item-description{
+    font-size:16px;
+    margin-bottom:20px;
+}
+/*end feature */
+
+ /* oustanding*/
+ .outstanding{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.outstanding::before{
+   content:"";
+   position: absolute;
+   background-color: #f63d2d;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index:-1;
+   width:100%;
+}
+
+.outstanding-title{
+   font-size: 36px;
+   font-weight: 700;
+    padding-bottom: 40px;
+    padding-top: 100px;
+}
+.outstanding-item{
+   position: relative;
+   padding: 16px;
+   height:100%;
+}
+.outstanding-item_img{
+   width:64px;
+   height: 64px;
+   margin-bottom: 24px;
+}
+.outstanding-item__content-title{
+   font-size: 20px;
+   font-weight: 700;
+}
+.outstanding-item_next-icon{
+   position: absolute;
+   right:-45px;
+   top: 50%;
+   transform:translateY(-50%);
+   transition: all 0.2s ease-in-out;
+}
+.outstanding-item_next-icon:hover{
+    right:-50px;
+}
+.outstanding-item_next-icon i{
+   font-size: 40px;
+}
+/* end oustanding*/
+
+/*knowledge-library*/
+.knowledge-library{
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: left;
+}
+.knowledge-library_title{
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.knowledge-library__item{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: all 0.2s ease-in-out;
+    margin-bottom:26px;
+}
+.knowledge-library__item:hover{
+    transform:translateY(-12px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+.knowledge-library__item-img{
+    max-width: 100%;
+}
+.knowledge-library__item-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #42464e;
+    padding-top: 12px;
+}
+.knowledge-library__item-description{
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 16px;
+    margin-bottom:8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+.knowledge-library__item-view-more{
+ color:#08f;
+}
+.knowledge-library__item-view-more:hover{
+    color:#F0512C;
+}
+.knowledge-library__btn-view-more{
+    background-color:  #F0512C;
+    color: #fff;
+}
+ /*end knowledge-library*/
+
+/*navbar menu mobile*/
+.navbar-menu__mobile{
+    position:fixed;
+    top: 0;
+    bottom:0;
+    right: 0;
+    width:320px;
+    background-color: #fff;
+    z-index: 2;
+}
+.navbar-menu__mobile-container-icon{
+    display:flex;
+    justify-content: flex-end;
+}
+.navbar-menu__mobile-container-icon i{
+    display:inline-block;
+    color: #7e8085;
+    font-size: 25px;
+    margin: 4px 12px;
+    padding: 6px 12px;
+}
+.navbar-menu__mobile-item a{
+    display: block;
+    padding:12px 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+    color: #818180;
+    font-size: 14px;
+}
+.navbar-menu__mobile-item:last-child{
+    border: none;
+    margin-top: 20px;
+}
+.navbar-menu__mobile-item-custom{
+    text-align: center;
+}
+.navbar-menu__mobile-item-btn{
+    box-shadow: 0 2px 2px #ccc;
+}
+/*end navbar menu mobile*/
+
+
+/*mobile*/
+@media (max-width: 739px) {
+    .mobile-hiden{
+        display: none ;
+    }
+    .navbar-scroll{
+        padding-left:30px;
+        padding-right:30px;
+    }
+    .navbar-background{
+        background-image: url(https://abaha.vn/images/background-mobile.png);
+        background-size:100% 100%;
+        background-position: top;
+
+    }
+    .banner{
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top:80px;
+    }
+    .banner-title{
+        color: #f0512c;
+    }
+    .banner-content{
+        color: #666;
+    }
+    .btn-banner{
+        text-align: center;
+    }
+    .screenshots{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-page-home__item{
+        text-align: center;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .service-thumb{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+@media (min-width: 740px) and (max-width:1023px) {
+    .tablet-hiden{
+        display: none ;
+    }
+    .banner{
+        padding-top: 100px;
+    }
+}
+@media (min-width: 1024px) {
+    .pc-hiden{
+        display: none ;
+    }
+    .banner{
+        padding-top: 100px;
+    }
+}
