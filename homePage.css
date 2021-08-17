@@ -230,6 +230,8 @@
     overflow: hidden;
 }
 .container-product__item-layout a{
+    display:flex;
+    flex-shrink: 0;
     font-size: 18px;
     color: #fff;
     font-weight: 700;
