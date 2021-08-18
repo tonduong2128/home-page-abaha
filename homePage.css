@@ -531,7 +531,7 @@
 /*mobile*/
 @media (max-width: 739px) {
     .mobile-hiden{
-        display: none ;
+        display: none !important;
     }
     .navbar-scroll{
         padding-left:30px;
@@ -573,7 +573,7 @@
 }
 @media (min-width: 740px) and (max-width:1023px) {
     .tablet-hiden{
-        display: none ;
+        display: none !important;
     }
     .banner{
         padding-top: 100px;
@@ -581,7 +581,7 @@
 }
 @media (min-width: 1024px) {
     .pc-hiden{
-        display: none ;
+        display: none !important;
     }
     .banner{
         padding-top: 100px;
