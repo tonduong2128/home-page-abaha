@@ -31,50 +31,104 @@
                     </div>
                     <div class="col l-6 m-2 c-2">
                         <div class="header-top-bar__container-contact header-top-bar__container-contact-custom">
-                                <div class="header-top-bar__container-contact-item">
-                                    <a href="https://www.facebook.com/TonDuong.IT" class="hover-link"> <i class="fab fa-facebook"></i></a>  
-                                </div>
-                                <div class="header-top-bar__container-contact-item">
-                                    <a href="mailto: tonduong212@gmail.com" class="hover-link"><i class="fab fa-youtube"></i></i></a>
-                                </div>
+                            <div class="header-top-bar__container-contact-item">
+                                <a href="https://www.facebook.com/TonDuong.IT" class="hover-link"> <i class="fab fa-facebook"></i></a>  
+                            </div>
+                            <div class="header-top-bar__container-contact-item">
+                                <a href="mailto: tonduong212@gmail.com" class="hover-link"><i class="fab fa-youtube"></i></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="grid wide">
-            <div class="header-top">
-                <div class="header-top__logo">
-                   <a href=""> <img class="navbar-logo" src="https://abaha.vn/images/abaha-logo.png" alt=""></a>
-                </div>
-                <div class="header-top__menu pc-hiden">
-                    <i class="fas fa-bars header-top__menu-icon"></i>
-                </div>
-    
-                <div class="header-top-container tablet-hiden mobile-hiden">
-                    <div class="header-top-container-link">
-                        <a href="/index.html" class="hover-link"> Trang chủ</a>
-                     </div>
-                     <div class="header-top-container-link">
-                         <a href="/forAbaha.html" class="hover-link"> Về Abaha</a> 
-                     </div>
-                     <div class="header-top-container-link">
-                         <a href="" class="hover-link"> Thiết kế wed</a>
-                     </div>
-                     <div class="header-top-container-link">
-                         <a href="" class="hover-link"> Thư viện</a>
-                     </div>
-                     <div class="header-top-container-link">
-                         <a href="" class="hover-link">Đăng nhập</a> 
-                     </div>
-                     <div class="header-top-container-link">
-                         <button class="btn header-top-container-link-btn">
-                             TẠO APP MẪU NGAY
-                         </button>
-                     </div>
+        <div class="header-top-comtainer ">
+            <div class="grid wide">
+                <div class="header-top">
+                    <div class="header-top__logo">
+                       <a href=""> <img class="navbar-logo" src="https://abaha.vn/images/abaha-logo.png" alt=""></a>
+                    </div>
+                    <div class="header-top__menu pc-hiden">
+                        <i class="fas fa-bars header-top__menu-icon"></i>
+                    </div>
+                    <div class="navbar-menu__mobile navbar-menu__mobile-custom mobile-hiden tablet-hiden pc-hiden">
+                        <div class="navbar-menu__mobile-item">
+                           <a href="" class="hover-link"> Trang chủ</a>
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="/forAbaha.html" class="hover-link"> Về Abaha</a> 
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="" class="hover-link"> Thiết kế wed</a>
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="" class="hover-link"> Thư viện</a>
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="" class="hover-link">Đăng nhập</a> 
+                        </div>
+                        <div class="navbar-menu__mobile-item navbar-menu__mobile-item-custom">
+                            <button class="btn btn-navbar navbar-menu__mobile-item-btn">
+                                tạo app mẫu ngay
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="header-top-container tablet-hiden mobile-hiden">
+                        <div class="header-top-container-link">
+                            <a href="/index.html" class="hover-link"> Trang chủ</a>
+                         </div>
+                         <div class="header-top-container-link">
+                             <a href="/forAbaha.html" class="hover-link"> Về Abaha</a> 
+                         </div>
+                         <div class="header-top-container-link">
+                             <a href="" class="hover-link"> Thiết kế wed</a>
+                         </div>
+                         <div class="header-top-container-link">
+                             <a href="" class="hover-link"> Thư viện</a>
+                         </div>
+                         <div class="header-top-container-link">
+                             <a href="" class="hover-link">Đăng nhập</a> 
+                         </div>
+                         <div class="header-top-container-link">
+                             <button class="btn header-top-container-link-btn">
+                                 TẠO APP MẪU NGAY
+                             </button>
+                         </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            var headerTopComtainer=document.querySelector('.header-top-comtainer');
+            var btnHeaderTopMenu=document.querySelector('.header-top__menu');
+            var optionsMenu=document.querySelector('.navbar-menu__mobile-custom');
+            btnHeaderTopMenu.onclick=function(){
+                optionsMenu.animate([
+                    {height: '0px'},
+                    {height: '300px'},
+                ],{
+                    duration:200,
+                })
+                optionsMenu.classList.toggle('mobile-hiden');
+                optionsMenu.classList.toggle('tablet-hiden');
+            }
+            window.onscroll=function(e){
+                if (window.scrollY>500){
+                    if (!headerTopComtainer.classList.contains('header-top-comtainer-show')){
+                        headerTopComtainer.animate([
+                            {height:'0px',},
+                            {height:'85px',}
+                        ],{
+                            duration:300,
+                        })
+                    }
+                    headerTopComtainer.classList.add('header-top-comtainer-show');    
+                }else{
+                    headerTopComtainer.classList.remove('header-top-comtainer-show');      
+                }
+            }
+        </script>
         <div class="container-welcom">
             <div class="gird wide">
                 <div class="row">
@@ -455,6 +509,27 @@
           text-align:left;
           font-size: 23px;
       }
+      .header-top-comtainer-show{
+        top: 0;
+        position: fixed;
+        background-color:#fff;
+        width:100%;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        z-index: 3;  
+        transition: height 0.2s ease-in-out;  
+        overflow: hidden;
+    }
+    .navbar-menu__mobile-custom{
+        top: 80px;
+        width: 100%;
+        height:min-content;
+        left: 0;
+        right: 0;
+        padding-bottom: 30px;
+        text-align: left;
+        box-shadow:0 8px 2px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
     </style>
 </body>
 </html>
