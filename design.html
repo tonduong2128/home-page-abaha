@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.abaha.vn/photos/resized/320x320/279-1586948441-abahavn.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./homePage.css">
+    <link rel="stylesheet" href="./forAbaha.css">
+    <title>Thiết Kế website bán hàng chuyên nghiệp</title>
+</head>
+<body>
+    <div class="main">
+        <div class="page-home-container">
+            <div class="navbar-background navbar-background-custom"></div>
+            <div class="grid wide">
+                
+                <nav class="navbar" data-aos="fade-down">
+                    <a href="/">
+                        <img class="navbar-logo" src="https://abaha.vn/images/abaha-logo.png" alt="">
+                    </a>
+                    <div class="navbar-menu pc-hiden tablet-hiden ">
+                        <i class="fas fa-bars navbar-menu__icon"></i>
+                    </div>
+                    <div class="navbar-menu__mobile mobile-hiden tablet-hiden pc-hiden">
+                        <div class="navbar-menu__mobile-container-icon">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                           <a href="" class="hover-link text-color-design"> Trang chủ</a>
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="/forAbaha.html" class="hover-link text-color-design"> Về Abaha</a> 
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="/design.html" class="hover-link text-color-design"> Thiết kế wed</a>
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="" class="hover-link text-color-design"> Thư viện</a>
+                        </div>
+                        <div class="navbar-menu__mobile-item">
+                            <a href="" class="hover-link text-color-design">Đăng nhập</a> 
+                        </div>
+                    </div>
+                    <style>
+                        
+                    </style>
+                    <script>
+                        var  navbar = document.querySelector('.navbar');
+                        var navbarMenu=document.querySelector('.navbar-menu');
+                        var navbarMenuMobile=document.querySelector('.navbar-menu__mobile');
+                        var btnCloseMobile=document.querySelector('.navbar-menu__mobile-container-icon');
+                        var body=document.querySelector('.main');
+                        navbarMenu.onclick=function(){
+                            navbarMenuMobile.classList.remove('mobile-hiden');
+                            navbarMenuMobile.animate([
+                                {
+                                    width: '0',
+                                },
+                                {
+                                   width: '320px',
+                                }
+                            ],{
+                                duration: 200,
+                            })
+                        }
+                        btnCloseMobile.onclick=function(){
+                            navbarMenuMobile.animate([
+                                {
+                                   width: '320px',
+                                },
+                                {
+                                    width: '0',
+                                }
+                            ],{
+                                duration: 200,
+                            })
+                            setTimeout(function(){
+                                navbarMenuMobile.classList.add('mobile-hiden');
+                            }, 180);
+                        }
+                        window.onscroll=function(e){
+                            if (window.scrollY > 600){
+                                if (!navbar.classList.contains('navbar-scroll')){
+                                    navbar.animate([
+                                        {height: '0',},
+                                        {height: '80px'}
+                                    ],{
+                                        duration: 200,
+                                    })
+                                }
+                                navbar.classList.add('navbar-scroll');
+                            } else{
+                                navbar.classList.remove('navbar-scroll')
+                            }
+                        }
+                    </script>
+                    <div class="navbar-options mobile-hiden " >
+                      <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                          <a class="nav-link text-color-design " href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-color-design" href="/forAbaha.html">Về Abaha</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-color-design " href="/design.html">Thiết kế wed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color-design " href="#">Thư viện</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color-design " href="#">Đăng nhập</a>
+                        </li>
+                      </ul>
+                    </div>
+                </nav>
+                <div class="separation-navbar"></div>
+
+                <div class="row">
+                    <div class="col l-6">
+                        <div class="banner">
+                            <div class="banner-title text-color-design" style="font-size: 42px;">
+                                Ai cũng có website để bán hàng
+                            </div>
+                            <div class="banner-content">
+                                <div class="banner-content__item text-color-design">
+                                    Tự động hoá Phát triển, Quản trị kênh phân phối, Đại lý, CTV Dropship, Affiliate, MLM
+                                </div>
+                            </div>
+                            <div class="btn-banner">
+                                <button class="btn btn-create">KHỞI TẠO NGAY - MIỄN PHÍ 1 THÁNG</button>
+                            </div>
+                            <div class="banner-content">
+                                <div class="banner-content__item text-color-design">
+                                    +2500 doanh nghiệp và chủ shop đang sử dụng
+                                </div>
+                                <div class="banner-content__item text-color-design" style="display: flex; justify-content: space-between;">
+                                    <img src="https://abaha.vn/images/app/tesori.jpg?v=6" style="max-width: 15%;" alt="">
+                                    <img src="https://abaha.vn/images/app/laciana.png?v=6" style="max-width: 15%;" alt="">
+                                    <img src="https://abaha.vn/images/app/gomart.png?v=6" style="max-width: 15%;" alt="">
+                                    <img src="https://abaha.vn/images/app/minhhouseware.png?v=6" style="max-width: 15%;" alt="">
+                                    <img src="https://abaha.vn/images/app/titana.png?v=6" style="max-width: 15%;" alt="">
+                                    <img src="https://abaha.vn/images/app/vietfarm.jpg?v=6" style="max-width: 15%;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6">
+                        <img src="https://abaha.vn/templates/abaha/webbanhang/layer_1.png?v=6" style="max-width: 100%;" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="screenshots">
+            <div class="grid wide">
+                <div class="introduction-product">
+                    <div class="introduction-product__title">
+                        Có ngay Website bán hàng chỉ trong 30 giây
+                    </div>
+                    <div class="introduction-product__content">
+                        Bạn là người đang kinh doanh hay chỉ mới bắt đầu, một nền tảng website <br>
+                         bán hàng chuyên nghiệp sẽ giúp bạn tiếp cận với khách hàng tiềm năng.
+                    </div>
+                </div>
+
+                <div class="container-product">
+                    <div class="row">
+                        <div class="col l-4 m-4 c-6">
+                            <ul class="container-product__item" data-aos="zoom-in" data-aos-duration="1000">
+                                <div class="service-thumb__item">
+                                    <div class="service-thumb__item-title">
+                                        ABAHA GIÚP BẠN THIẾT KẾ APP NHƯ THẾ NÀO?
+                                    </div>
+                                    <div class="service-thumb__item-content">
+                                        <div class="service-thumb__item-content-text ">
+                                            <div class="service-thumb__item-content-text-svg">
+                                                <svg class="" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="app-store-ios" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM127 384.5c-5.5 9.6-17.8 12.8-27.3 7.3-9.6-5.5-12.8-17.8-7.3-27.3l14.3-24.7c16.1-4.9 29.3-1.1 39.6 11.4L127 384.5zm138.9-53.9H84c-11 0-20-9-20-20s9-20 20-20h51l65.4-113.2-20.5-35.4c-5.5-9.6-2.2-21.8 7.3-27.3 9.6-5.5 21.8-2.2 27.3 7.3l8.9 15.4 8.9-15.4c5.5-9.6 17.8-12.8 27.3-7.3 9.6 5.5 12.8 17.8 7.3 27.3l-85.8 148.6h62.1c20.2 0 31.5 23.7 22.7 40zm98.1 0h-29l19.6 33.9c5.5 9.6 2.2 21.8-7.3 27.3-9.6 5.5-21.8 2.2-27.3-7.3-32.9-56.9-57.5-99.7-74-128.1-16.7-29-4.8-58 7.1-67.8 13.1 22.7 32.7 56.7 58.9 102h52c11 0 20 9 20 20 0 11.1-9 20-20 20z"></path></svg>
+                                            </div>
+                                           <div  >
+                                                Tạo ứng dụng di động có 24 tính năng.
+                                           </div> 
+                                        </div>
+                                        <div class="service-thumb__item-content-text ">
+                                            <div class="service-thumb__item-content-text-svg">
+                                                <svg class="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="brush" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M352 0H32C14.33 0 0 14.33 0 32v224h384V32c0-17.67-14.33-32-32-32zM0 320c0 35.35 28.66 64 64 64h64v64c0 35.35 28.66 64 64 64s64-28.65 64-64v-64h64c35.34 0 64-28.65 64-64v-32H0v32zm192 104c13.25 0 24 10.74 24 24 0 13.25-10.75 24-24 24s-24-10.75-24-24c0-13.26 10.75-24 24-24z"></path></svg>
+                                            </div>
+                                            <div>
+                                                Thiết kế ứng dụng mang phong cách của doanh nghiệp.
+                                            </div>
+                                        </div>
+                                        <div class="service-thumb__item-content-text ">
+                                            <div class="service-thumb__item-content-text-svg">
+                                                <svg class="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-friends" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg>
+                                            </div>
+                                            <div>
+                                                Khách hàng có thể tìm thấy bạn trên cả hai nền tảng Android, IOS.
+                                            </div>
+                                        </div>
+                                        <div class="service-thumb__item-content-text ">
+                                            <div class="service-thumb__item-content-text-svg">
+                                                <svg class="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sync" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M440.65 12.57l4 82.77A247.16 247.16 0 0 0 255.83 8C134.73 8 33.91 94.92 12.29 209.82A12 12 0 0 0 24.09 224h49.05a12 12 0 0 0 11.67-9.26 175.91 175.91 0 0 1 317-56.94l-101.46-4.86a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12H500a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12h-47.37a12 12 0 0 0-11.98 12.57zM255.83 432a175.61 175.61 0 0 1-146-77.8l101.8 4.87a12 12 0 0 0 12.57-12v-47.4a12 12 0 0 0-12-12H12a12 12 0 0 0-12 12V500a12 12 0 0 0 12 12h47.35a12 12 0 0 0 12-12.6l-4.15-82.57A247.17 247.17 0 0 0 255.83 504c121.11 0 221.93-86.92 243.55-201.82a12 12 0 0 0-11.8-14.18h-49.05a12 12 0 0 0-11.67 9.26A175.86 175.86 0 0 1 255.83 432z"></path></svg>
+                                            </div>
+                                            <div>
+                                                Giải pháp công nghệ cho doanh nghiệp: Tự động hoá quy trình bán hàng, giảm chi phí và vận hành doanh nghiệp mọi lúc, mọi nơi.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>  
+                        <div class="col l-4 m-4 c-6">
+                            <div class="container-product__item" data-aos="zoom-in" data-aos-duration="1000">
+                                <img src="https://abaha.vn/templates/abaha/webbanhang/iphonere.png?v=6" alt="" style="max-width: 80%;">
+                            </div>
+                        </div>
+                        <div class="col l-4 m-4 c-6" >
+                            <div class="container-product__item" data-aos="zoom-in" data-aos-duration="1000">
+                                <ul class="container-product__item">
+                                    <div class="service-thumb__item">
+                                        <div class="service-thumb__item-title">
+                                            ABAHA GIÚP BẠN THIẾT KẾ APP NHƯ THẾ NÀO?
+                                        </div>
+                                        <div class="service-thumb__item-content">
+                                            <div class="service-thumb__item-content-text ">
+                                                <div class="service-thumb__item-content-text-svg">
+                                                    <svg class="" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="app-store-ios" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM127 384.5c-5.5 9.6-17.8 12.8-27.3 7.3-9.6-5.5-12.8-17.8-7.3-27.3l14.3-24.7c16.1-4.9 29.3-1.1 39.6 11.4L127 384.5zm138.9-53.9H84c-11 0-20-9-20-20s9-20 20-20h51l65.4-113.2-20.5-35.4c-5.5-9.6-2.2-21.8 7.3-27.3 9.6-5.5 21.8-2.2 27.3 7.3l8.9 15.4 8.9-15.4c5.5-9.6 17.8-12.8 27.3-7.3 9.6 5.5 12.8 17.8 7.3 27.3l-85.8 148.6h62.1c20.2 0 31.5 23.7 22.7 40zm98.1 0h-29l19.6 33.9c5.5 9.6 2.2 21.8-7.3 27.3-9.6 5.5-21.8 2.2-27.3-7.3-32.9-56.9-57.5-99.7-74-128.1-16.7-29-4.8-58 7.1-67.8 13.1 22.7 32.7 56.7 58.9 102h52c11 0 20 9 20 20 0 11.1-9 20-20 20z"></path></svg>
+                                                </div>
+                                               <div  >
+                                                    Tạo ứng dụng di động có 24 tính năng.
+                                               </div> 
+                                            </div>
+                                            <div class="service-thumb__item-content-text ">
+                                                <div class="service-thumb__item-content-text-svg">
+                                                    <svg class="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="brush" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M352 0H32C14.33 0 0 14.33 0 32v224h384V32c0-17.67-14.33-32-32-32zM0 320c0 35.35 28.66 64 64 64h64v64c0 35.35 28.66 64 64 64s64-28.65 64-64v-64h64c35.34 0 64-28.65 64-64v-32H0v32zm192 104c13.25 0 24 10.74 24 24 0 13.25-10.75 24-24 24s-24-10.75-24-24c0-13.26 10.75-24 24-24z"></path></svg>
+                                                </div>
+                                                <div>
+                                                    Thiết kế ứng dụng mang phong cách của doanh nghiệp.
+                                                </div>
+                                            </div>
+                                            <div class="service-thumb__item-content-text ">
+                                                <div class="service-thumb__item-content-text-svg">
+                                                    <svg class="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-friends" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg>
+                                                </div>
+                                                <div>
+                                                    Khách hàng có thể tìm thấy bạn trên cả hai nền tảng Android, IOS.
+                                                </div>
+                                            </div>
+                                            <div class="service-thumb__item-content-text ">
+                                                <div class="service-thumb__item-content-text-svg">
+                                                    <svg class="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sync" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M440.65 12.57l4 82.77A247.16 247.16 0 0 0 255.83 8C134.73 8 33.91 94.92 12.29 209.82A12 12 0 0 0 24.09 224h49.05a12 12 0 0 0 11.67-9.26 175.91 175.91 0 0 1 317-56.94l-101.46-4.86a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12H500a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12h-47.37a12 12 0 0 0-11.98 12.57zM255.83 432a175.61 175.61 0 0 1-146-77.8l101.8 4.87a12 12 0 0 0 12.57-12v-47.4a12 12 0 0 0-12-12H12a12 12 0 0 0-12 12V500a12 12 0 0 0 12 12h47.35a12 12 0 0 0 12-12.6l-4.15-82.57A247.17 247.17 0 0 0 255.83 504c121.11 0 221.93-86.92 243.55-201.82a12 12 0 0 0-11.8-14.18h-49.05a12 12 0 0 0-11.67 9.26A175.86 175.86 0 0 1 255.83 432z"></path></svg>
+                                                </div>
+                                                <div>
+                                                    Giải pháp công nghệ cho doanh nghiệp: Tự động hoá quy trình bán hàng, giảm chi phí và vận hành doanh nghiệp mọi lúc, mọi nơi.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-thumb" style="background-color: #FFF1F2;">
+                    <div class="row">   
+                        <div class="col l-6 m-12 c-12" >
+                            <div class="service-thumb__item">
+                                <img src="https://abaha.vn/templates/abaha/webbanhang/layer_4.png?v=6" alt="" class="service-thumb__item-img">
+                            </div>
+                        </div>
+                        <div class="col l-6 m-12 c-12">
+                            <div class="service-thumb__item">
+                                <div class="service-thumb__item-title" style="text-align:left;">
+                                    Ai cũng có thể sử dụng
+                                </div>
+                                <div class="service-thumb__item-content"  >
+                                    <div class="service-thumb__item-content-text" style="width: 100%;">
+                                        <i class="fas fa-check"></i>
+                                        Người mới khởi nghiệp
+                                    </div>
+                                    <div class="service-thumb__item-content-text" style="width: 100%;">
+                                        <i class="fas fa-check"></i>
+                                        Chủ kinh doanh trong mọi lĩnh vực
+                                    </div>
+                                    <div class="service-thumb__item-content-text" style="width: 100%;">
+                                        <i class="fas fa-check"></i>
+                                        Chủ kinh doanh vừa và nhỏ cần tìm kênh bán hàng mới
+                                    </div>
+                                    <div class="service-thumb__item-content-text" style="width: 100%;">
+                                        <i class="fas fa-check"></i>
+                                        Người kinh doanh online
+                                    </div>
+                                    <div class="service-thumb__item-content-text" style="width: 100%;">
+                                        <i class="fas fa-check"></i>
+                                        Người bắt đầu quan tâm đến kinh doanh
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outstanding" >
+                <div class="gird wide">
+                    <div class="row">
+                        <div class="col l-12 m-12 c-12">
+                            <div class="outstanding-title">
+                                TẠI SAO NÊN CHỌN ABAHA LÀ ĐỐI TÁC THIẾT KẾ APP ?
+                            </div>
+                        </div>
+                        <div class="col l-4 m-4 c-12">
+                            <div class="outstanding-item">
+                                <img src="https://abaha.vn/templates/abaha/img/icon/work/download.png" alt="" class="outstanding-item_img">
+                                <div class="outstanding-item__content">
+                                    <div class="outstanding-item__content-title">
+                                        Thời gian triển khai nhanh
+                                    </div>
+                                    <div class="outstanding-item__content-description">
+                                        Nhận ứng dụng di động sau 7 ngày
+                                    </div>
+                                </div>
+                                <div class="outstanding-item_next-icon c-0 m-6 l-6 "><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-4 c-12">
+                            <div class="outstanding-item">
+                                <img src="https://abaha.vn/templates/abaha/img/icon/work/download.png" alt="" class="outstanding-item_img">
+                                <div class="outstanding-item__content">
+                                    <div class="outstanding-item__content-title">
+                                        Hỗ trợ tận tình
+
+                                    </div>
+                                    <div class="outstanding-item__content-description">
+                                        Đồng hành cùng doanh nghiệp xử lý mọi vấn đề kỹ thuật
+                                    </div>
+                                </div>
+                                <div class="outstanding-item_next-icon c-0 m-6 l-6"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-4 c-12">
+                            <div class="outstanding-item">
+                                <img src="https://abaha.vn/templates/abaha/img/icon/work/download.png" alt="" class="outstanding-item_img">
+                                <div class="outstanding-item__content">
+                                    <div class="outstanding-item__content-title">
+                                        Uy tín được khẳng định
+                                    </div>
+                                    <div class="outstanding-item__content-description">
+                                        Thành viên của Hiệp hội Phần mềm và Dịch vụ Công nghệ Thông tin Việt Nam (VINASA)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-12 m-12 c-12">
+                            <div class="outstanding-title">
+                                2500+ KHÁCH HÀNG ĐANG TIN DÙNG!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="knowledge-library">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-12 c-12 m-12">
+                        <div class="knowledge-library_title">
+                            THƯ VIỆN KIẾN THỨC + EBOOK MIỄN PHÍ
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="knowledge-library__item">
+                            <img src="https://abaha.vn/images/news1.png" alt="" class="knowledge-library__item-img">
+                            <div class="knowledge-library__item-title">
+                                3 điều chủ doanh nghiệp cần hiểu khi thiết kế App bán hàng hoa hồng nhiều cấp
+                            </div>
+                            <div class="knowledge-library__item-description">
+                                Với sự phát triển của ứng dụng điện thoại, nhu cầu có một chiếc App bán hàng của riêng doanh nghiệp ngày càng tăng. Đặc biệt với những doanh nghiệp lớn, một chiếc app bán hàng hoa hồng nhiều cấp không chỉ giúp doanh nghiệp tăng uy tín thương hiệu mà còn giúp tối ưu và giảm tải được rất nhiều công việc, chi phí.
+                            </div>
+                            <a href="" class="knowledge-library__item-view-more">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="knowledge-library__item">
+                            <img src="https://abaha.vn/images/news1.png" alt="" class="knowledge-library__item-img">
+                            <div class="knowledge-library__item-title">
+                                3 điều chủ doanh nghiệp cần hiểu khi thiết kế App bán hàng hoa hồng nhiều cấp
+                            </div>
+                            <div class="knowledge-library__item-description">
+                                Với sự phát triển của ứng dụng điện thoại, nhu cầu có một chiếc App bán hàng của riêng doanh nghiệp ngày càng tăng. Đặc biệt với những doanh nghiệp lớn, một chiếc app bán hàng hoa hồng nhiều cấp không chỉ giúp doanh nghiệp tăng uy tín thương hiệu mà còn giúp tối ưu và giảm tải được rất nhiều công việc, chi phí.
+                            </div>
+                            <a href="" class="knowledge-library__item-view-more">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="knowledge-library__item">
+                            <img src="https://abaha.vn/images/news1.png" alt="" class="knowledge-library__item-img">
+                            <div class="knowledge-library__item-title">
+                                3 điều chủ doanh nghiệp cần hiểu khi thiết kế App bán hàng hoa hồng nhiều cấp
+                            </div>
+                            <div class="knowledge-library__item-description">
+                                Với sự phát triển của ứng dụng điện thoại, nhu cầu có một chiếc App bán hàng của riêng doanh nghiệp ngày càng tăng. Đặc biệt với những doanh nghiệp lớn, một chiếc app bán hàng hoa hồng nhiều cấp không chỉ giúp doanh nghiệp tăng uy tín thương hiệu mà còn giúp tối ưu và giảm tải được rất nhiều công việc, chi phí.
+                            </div>
+                            <a href="" class="knowledge-library__item-view-more">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="col l-12 m-12 c-12" style="text-align:center; padding-top:80px;">
+                        <button class="btn knowledge-library__btn-view-more">Xem thêm</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="gird wide">
+            <div class="service-thumb">
+                <div class="row">   
+                    <div class="col l-6 m-12 c-12">
+                        <div class="service-thumb__item">
+                            <img src="https://abaha.vn/images/Abaha.vn-04.png" alt="" class="service-thumb__item-img-custom">
+                        </div>
+                    </div>
+                    <div class="col l-6 m-12 c-12">
+                        <div class="service-thumb__item">
+                            <div class="service-thumb__item-title">
+                                ĐỘT PHÁ DOANH THU <br>
+                                VỚI NỀN TẢNG BUSINESS APP
+                                MANG THƯƠNG HIỆU <br>
+                                DOANH NGHIỆP<br>
+                                TỪ ABAHA
+                            </div>
+                            <div class="service-thumb__item-content">
+                                <div class="service-thumb__item-content-text service-thumb__item-content-text-custom">
+                                    <div class="service-thumb__item-content-text-icon">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </div>
+                                   <div>
+                                        Master B : Nền tảng E-learning Ecommerce cho chuyên gia
+                                   </div> 
+                                </div>
+                                <div class="service-thumb__item-content-text service-thumb__item-content-text-custom">
+                                    <div class="service-thumb__item-content-text-icon">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </div>
+                                    <div>
+                                        HomeID : Nền tảng trợ lý cư dân kết hợp Thương mại điện tử
+                                    </div>
+                                </div>
+                                <div class="service-thumb__item-content-text service-thumb__item-content-text-custom">
+                                    <div class="service-thumb__item-content-text-icon">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </div>
+                                    <div>
+                                        ABAHA B2B : Nền tảng Xây, Quản lý kênh phân phối, Đại lý, CTV (MLM, Dropship, GT, Hoa hồng nhiều cấp, Sỉ, lẻ)
+                                    </div>
+                                </div>
+                                <div class="service-thumb__item-content-text service-thumb__item-content-text-custom">
+                                    <div class="service-thumb__item-content-text-icon">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </div>
+                                    <div>
+                                        ABAHA C2C : Nền tảng bán hàng cá nhân
+                                    </div>
+                                </div>
+                                <div class="service-thumb__item-content-text service-thumb__item-content-text-custom">
+                                    <div class="service-thumb__item-content-text-icon">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </div>
+                                    <div>
+                                        KOLAPP : Nền tảng App TMĐT cho KOLs
+                                    </div>
+                                </div>
+                                <div class="service-thumb__item-content-text service-thumb__item-content-text-custom">
+                                    <div class="service-thumb__item-content-text-icon">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </div>
+                                    <div>
+                                        ABAHA OTA : Nền tảng thương mại cho khách sạn, vé máy bay, tour
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-thumb__item-btn-contianer">
+                                <button class="btn service-thumb__item-btn">TẠO APP MẪU TRONG 30S</button>
+                                <button class="btn service-thumb__item-btn">TƯ VẤN NGAY</button>
+                            </div>
+                        </div>
+                    </div>    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-page-home">
+            <div class="gird wide">
+                <div class="row">
+                    <div class="col l-3 m-6 c-12">
+                        <div class="footer-page-home__item">
+                            <a href="/">
+                                <img class="footer-page-home__logo" src="https://abaha.vn/images/abaha-logo.png" alt="">
+                            </a>
+                            <div class="footer-page-home__title">
+                                CÔNG TY CỔ PHẦN ĐẦU TƯ CÔNG NGHỆ ABAHA VIỆT NAM
+                            </div>
+                            <div class="footer-page-home__content">
+                                Mã số thuế: 0108017873 <br>
+                                Ngày thành lập: 10/10/2017 <br>
+                                Lĩnh vực kinh doanh: Phần Mềm <br> <br>
+                                Với nền tảng công nghệ vượt trội, ABAHA Việt Nam mong muốn cùng quý khách xây dựng những sản phẩm mang lại lợi ích cho đối tác và cộng đồng.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <div class="footer-page-home__item">
+                            <div class="footer-page-home__title">
+                                LIÊN HỆ
+                            </div>
+                            <div class="footer-page-home__content">
+                                Phone: <a href="tel: 0987795761" class="hover-link">0927 217 227</a><br>
+                                Zalo: <a href="https://zalo.me/0987795761" class="hover-link">https://zalo.me/abahavn </a> <br>
+                                Mail: <a href="mailto: tonduong212@gmail.com" class="hover-link">contact@abaha.vn</a>  <br>
+                                Địa chỉ: Toà nhà Hà Thành, 102 Thái Thịnh, Phường Thịnh Quang, Quận Đống Đa, TP Hà Nội <br> <br>
+                               <a href="" class="hover-link"> <i class="fab fa-youtube"></i> YouTube </a><br>
+                               <a href="" class="hover-link"><i class="fab fa-facebook"></i> Fanpage</a> <br>
+                                <a href="" class="hover-link"><i class="fab fa-facebook"></i>Group hỗ trợ</a>  <br>
+                               <a href=""><img src="https://abaha.vn/bct.png" alt="" class="footer-page-home__content-img"></a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <div class="footer-page-home__item">
+                            <div class="footer-page-home__title">
+                                ABAHA VIỆT NAM
+                            </div>
+                            <div class="footer-page-home__content">
+                                <a href="" class="hover-link">  Về chúng tôi </a>  <br>
+                                <a href="" class="hover-link">  Hồ sơ năng lực </a>  <br>   
+                                <a href="" class="hover-link">  Tin tức & Blog  </a>  <br>
+                                <a href="" class="hover-link">  Thiết kế App  </a>  <br>
+                                <a href="" class="hover-link"> Thiết kế Web  </a>  <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <div class="footer-page-home__item">
+                            <div class="footer-page-home__title">
+                                TRUNG TÂM HỖ TRỢ
+                            </div>
+                            <div class="footer-page-home__content">
+                                <a href="" class="hover-link">  Hướng dẫn thanh toán </a><br>
+                                <a href="" class="hover-link"> Chính sách bảo trì </a> <br>
+                                <a href="" class="hover-link">  Điều khoản sử dụng </a> <br>
+                                <a href="" class="hover-link"> Chính sách bảo vệ thông tin khách hàng </a> <br> <br>
+                                <a href="" class="hover-link">   Chính sách đổi trả và hoàn tiền </a> <br>
+                                <a href="" class="hover-link">  Tài liệu HDSD </a> <br>
+                                <a href="https://www.facebook.com/TonDuong.IT" class="hover-link">  Facebook cá nhân </a> <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l-12 c-12 m-12">
+                        <div class="footer-page-home__tail">
+                            © 2020, Made by ABAHA Việt Nam JSC.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <style>
+
+        .text-color-design {
+             color: #704136 !important;
+        }
+        .page-home-container{
+            background-image: linear-gradient(to bottom, #FFDADB , white) !important;
+        }
+    </style>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
+</body>
+</html>
