@@ -332,11 +332,12 @@
 .service-thumb__item-btn{
     background-color:#F0512C ;
     color: #fff;
-    margin-left: 20px;
+    margin: 8px;
 }
 .service-thumb__item-btn-contianer{
-    padding-top: 80px;
-    width:max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*end service-thumb*/
 
